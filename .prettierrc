@@ -1,0 +1,12 @@
+{
+  "astroSortOrder": "markup | styles",
+  "astroAllowShorthand": false,
+  "endOfLine": "lf",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 140,
+  "plugins": ["prettier-plugin-astro"],
+  "pluginSearchDirs": false
+}

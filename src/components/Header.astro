@@ -1,6 +1,5 @@
 ---
 import Navigation from './Navigation.astro'
-import ThemeIcon from './ThemeIcon.astro'
 ---
 
 <style>
@@ -8,11 +7,16 @@ import ThemeIcon from './ThemeIcon.astro'
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    background-color: #3d405b;
   }
 
-  .logo {
-    display: flex;
+  .me {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f4f1de;
+    text-decoration: none;
   }
   .left {
     display: flex;
@@ -27,11 +31,10 @@ import ThemeIcon from './ThemeIcon.astro'
 </style>
 
 <header>
-  <div class="logo">My logo goes here</div>
+  <a class="me" href="/">René Mundt</a>
   <div class="left">
     <div class="wrapper">
       <Navigation />
-      <ThemeIcon />
     </div>
   </div>
 </header>

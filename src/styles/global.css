@@ -1,9 +1,10 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #f4f1de;
   font-family: sans-serif;
 }
 
 body {
+  margin: 0;
   /* margin: 0 auto;
   width: 100%;
   max-width: 80ch;
@@ -24,11 +25,17 @@ h1 {
   display: unset;
 }
 
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
+main {
+  background-color: f4f1de;
+  width: 120ch;
+  margin: 0 auto;
 }
 
-.dark .nav-links a {
-  color: #fff;
+a {
+  padding: 0.2em;
+  color: #e07a5f;
+}
+a:hover,
+a:focus {
+  color: black;
 }

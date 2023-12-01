@@ -1,8 +1,13 @@
 ---
-const { url, title } = Astro.props;
+const { url, title } = Astro.props
 ---
 
+<style>
+  li {
+    list-style: none;
+  }
+</style>
+
 <li>
-  <a href={url}>{title}
-  </a>
+  <a href={url}>{title}</a>
 </li>

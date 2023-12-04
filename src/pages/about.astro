@@ -1,57 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = 'About Me'
-
-const identity = {
-  firstName: 'René',
-  country: 'Denmark',
-  occupation: 'Programmer, system developer',
-  hobbies: ['cycling', 'reading'],
-}
-
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro']
-
-const happy = true
-const finished = true
-const goal = 3
-
-const textCase = 'uppercase'
-const fontWeight = 'bold'
-const skillColor = 'navy'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
-  <p>I am a software engineer and have been working with software development since the late 90's.</p>
-
+  <p>My name is René Mundt and I am programmer and have been working with software development since the late 90's.</p>
   <p>
-    I work as a fullstack developer with focus on frontend web development at <a href="https://www.dfds.com">DFDS A/S</a> located in
-    Copenhagen.
+    I live in <a
+      href="https://www.google.com/maps/place/4200+Slagelse/data=!4m2!3m1!1s0x464d6162e0d4cdb7:0xbf0409f313af0f00?sa=X&ved=2ahUKEwisvJO0mvWCAxUbSfEDHXuwCDIQ8gF6BAgPEAA"
+      target="__blank">Slagelse</a
+    > and have been working at <a href="https://dfds.com" target="__blank">DFDS A/S</a> as a web/fullstack developer since 2015.
   </p>
-
-  <!-- <p>Here are a few facts about me:</p> 
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-        </li>
-      )
-    }
-  </ul>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  {happy && <p>I am happy to be learning Astro!</p>}
-  {finished && <p>I finished this tutorial!</p>}
-  {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>} -->
+  <p>
+    I created this site mainly because of the <a href="/blog">blog</a> which contains blog posts about programming stuff I haven't been able
+    to find solutions to elsewhere on the web.
+  </p>
+  <p>When not working and programming I spend time with my lovely family or workout in a gym or take my road bike for a spin.</p>
 </BaseLayout>

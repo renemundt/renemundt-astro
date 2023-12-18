@@ -1,13 +1,19 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 const { frontmatter } = Astro.props
+import type { CollectionEntry } from 'astro:content'
+type Props = CollectionEntry<'blog'>['data']
+
+const { title, description, pubDate } = Astro.props
+console.log('pubDate', pubDate)
+console.log('typeof pubDate', typeof pubDate)
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
+<BaseLayout pageTitle={title}>
+  <p><em>{description}</em></p>
+  <p>{pubDate.toISOString().slice(0, 10)}</p>
 
-  <div class="tags">
+  <!-- <div class="tags">
     {
       frontmatter.tags.map((tag) => (
         <p class="tag">
@@ -16,7 +22,7 @@ const { frontmatter } = Astro.props
       ))
     }
   </div>
-
+ -->
   <slot />
 </BaseLayout>
 <style>

@@ -1,0 +1,17 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from '../components/BlogPost.astro'
+import createSlug from '../utils/createSlug'
+
+const allPosts = await getCollection('blog')
+const pageTitle = 'Blog archive'
+
+console.log('allPosts', allPosts)
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ul>
+    {allPosts.map((post) => <BlogPost url={`/${createSlug(post.data.title)}`} title={post.data.title} />)}
+  </ul>
+</BaseLayout>

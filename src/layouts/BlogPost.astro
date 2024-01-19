@@ -7,19 +7,7 @@ const { title, description, pubDate } = Astro.props
 ---
 
 <BaseLayout pageTitle={title} description={description}>
-  <p><em>{description}</em></p>
-  <p>{pubDate.toISOString().slice(0, 10)}</p>
-
-  <!-- <div class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
- -->
+  <p><em>Published: {pubDate.toISOString().slice(0, 10)}</em></p>
   <slot />
 </BaseLayout>
 <style>

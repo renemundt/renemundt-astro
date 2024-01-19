@@ -1,9 +1,9 @@
 ---
-title: 'UseSwr hook with reacti18next '
-pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
-tags: ['astro', 'blogging', 'learning in public']
+title: 'UseSwr hook with react-i18next '
+pubDate: 2024-01-19
+description: 'Using useSwr hook together with react-i18next'
+author: 'René Mundt'
+tags: ['reactjs', 'nextjs', 'reacti-18next', 'usewr']
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.

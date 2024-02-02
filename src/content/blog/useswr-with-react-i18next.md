@@ -6,11 +6,9 @@ author: 'René Mundt'
 tags: ['reactjs', 'nextjs', 'reacti-18next', 'usewr']
 ---
 
-As part of working on a feature at [DFDS A/S](https://www.dfds.com) I needed to combine [useSwr](https://swr.vercel.app/docs/typescript.en-US#useswr) with [react-i18next](https://react.i18next.com) but was not able to find any examples searching the web. This blogpost is about implementing a react hook the does exactly that.
+As part of working on a feature at [DFDS A/S](https://www.dfds.com) I needed to combine [useSwr](https://swr.vercel.app/docs/typescript.en-US#useswr) with [react-i18next](https://react.i18next.com) but was not able to find any examples online. This blogpost is about implementing a react hook the does exactly that.
 
 ## Implementation
-
-1. **Hook**: This is the hook implementation
 
 ```js
 import useSWR from 'swr'
@@ -60,4 +58,12 @@ export interface I18NextResult {
 }
 ```
 
-2. **Using the hook**: This is the usage of the hook
+The
+
+```js
+const locale = getUrlLocale()
+```
+
+is just a method that returns the locale. Remember the locale has to be a two character code like **en** for english or **da** for danish
+
+## Using the hook

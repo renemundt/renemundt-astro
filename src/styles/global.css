@@ -41,3 +41,7 @@ a:hover,
 a:focus {
   color: black;
 }
+
+.astro-code {
+  padding: 0.5rem;
+}

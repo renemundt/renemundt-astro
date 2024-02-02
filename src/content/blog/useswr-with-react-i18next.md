@@ -12,7 +12,7 @@ As part of working on a feature at [DFDS A/S](https://www.dfds.com) I needed to 
 
 1. **Hook**: This is the hook implementation
 
-```
+```js
 import useSWR from 'swr'
 import { initReactI18next } from 'react-i18next'
 import i18n from 'i18next'
@@ -58,7 +58,6 @@ export interface I18NextResult {
   isLoading: boolean
   i18Instance: any
 }
-
 ```
 
 2. **Using the hook**: This is the usage of the hook

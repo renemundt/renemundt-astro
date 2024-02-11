@@ -1,6 +1,6 @@
 ---
 title: 'UseSwr hook with react-i18next '
-pubDate: 2024-02-11s
+pubDate: 2024-02-11
 description: 'Using useSwr hook together with react-i18next'
 author: 'René Mundt'
 tags: ['reactjs', 'nextjs', 'react-i18next', 'usewr']

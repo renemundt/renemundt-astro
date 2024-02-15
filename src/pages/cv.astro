@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+const pageTitle = 'Curriculum Vitae'
+const metaDescription = 'René Mundt, curriculum vitae, cv, presentation, resume'
+const today = new Date()
+const birthDate = new Date('1975-10-17')
+var age = today.getFullYear() - birthDate.getFullYear()
+var m = today.getMonth() - birthDate.getMonth()
+if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+  age--
+}
+---
+
+<BaseLayout pageTitle={pageTitle} metaDescription={metaDescription}>
+  <h2>Personal information</h2>
+  <div>René Mundt</div>
+  <div>Sjællandsvej 3</div>
+  <div>4200 Slagelse</div>
+  <a href="mailto: renem@live.dk">renem@live.dk</a>
+  <div>Age:{age}</div>
+  <div>Married: Yes</div>
+  <div>Children: 2</div>
+  <div>Drivers license: Yes</div>
+
+  <h2>Education</h2>
+  <div class="row">
+    <div>HTX</div>
+    <div class="period">1992-1995</div>
+  </div>
+  <div class="row">
+    <div>HH</div>
+    <div class="period">1995-1996</div>
+  </div>
+  <div class="row">
+    <div>Procurement education F.L.Smidth</div>
+    <div class="period">1996-1998</div>
+  </div>
+  <div class="row">
+    <div>Datamatiker</div>
+    <div class="period">1998-2000</div>
+  </div>
+  <div class="row">
+    <div>Bachelor Computer Science IHK</div>
+    <div class="period">2007-2012</div>
+  </div>
+  <h2>Job experience</h2>
+  <div class="row">
+    <div>System Developer / Consultant - Ementor</div>
+    <div class="period">2000-2002</div>
+  </div>
+  <div class="row">
+    <div>System Developer Novo Nordisk</div>
+    <div class="period">2002-2004</div>
+  </div>
+  <div class="row">
+    <div>System Developer - Region Sjælland</div>
+    <div class="period">2004-2010</div>
+  </div>
+  <div class="row">
+    <div>Full Stack Developer - Coop Danmark</div>
+    <div class="period">2010-2012</div>
+  </div>
+  <div class="row">
+    <div>Full Stack Developer - Thomas Cook Airlines</div>
+    <div class="period">2012-2016</div>
+  </div>
+  <div class="row">
+    <div>Full Stack / Frontend developer - DFDS</div>
+    <div class="period">2016....</div>
+  </div>
+</BaseLayout>
+
+<div class="css-qle7zx-Row"></div><div class="css-lzujms-Experience">
+  <div class="css-1ew1vdc-Experience"><h3 class="css-qxgxo0-Heading3">Experience</h3></div>
+</div><div class="css-lzujms-Experience">
+  <table class="css-1y62bwo-Experience">
+    <thead><tr><th class="css-1g8r3gj-thTdStyles">Category</th><th class="css-1g8r3gj-thTdStyles">Technology</th></tr></thead><tbody
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">Frontend/Web</td><td class="css-1g8r3gj-thTdStyles"
+          >ASP.NET MVC/WebForms, Angular2+, Reactjs, npm, Javascript, Typescript, Angularjs, Jest, Jasmine, Nightwatch, Cypress.io</td
+        ></tr
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">Backend</td><td class="css-1g8r3gj-thTdStyles"
+          >Nuget, WebApi, Console applications, WPF, Microsoft Forms, Unit testing, SQL, SQL Server Management Studio, Nodejs, IoC, AWS
+          DynamoDB, CosmosDb, Elastic Search (ELK), NHibernate, Design patterns</td
+        ></tr
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">Tools</td><td class="css-1g8r3gj-thTdStyles"
+          >Visual Studio, Visual Studio Code, Fiddler, Postman, Google Chrome Developer Tools, git, Sourcetree, github, TFS, NPM</td
+        ></tr
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">Infrastructure</td><td class="css-1g8r3gj-thTdStyles"
+          >Windows Server, IIS, AWS S3, AWS Cloudfront, AWS lambda functions, IaC (Terraform, AWS CLI), Azure DevOps</td
+        ></tr
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">CI/CD</td><td class="css-1g8r3gj-thTdStyles">Azure DevOps, Octopus, Jenkins, Powershell</td></tr
+      ><tr
+        ><td class="css-1g8r3gj-thTdStyles">Other</td><td class="css-1g8r3gj-thTdStyles"
+          >Technical project management, Business and Architecture understanding, Scrum, Coordination, Team management</td
+        ></tr
+      ></tbody
+    >
+  </table>
+</div><div class="css-qle7zx-Row">
+  <h3 class="css-qxgxo0-Heading3">Languages</h3><div>
+    <div class="css-emdfx1-Col"><div class="css-1mvnxic-language">Danish</div><div>Fluent (speech and writing)</div></div><div
+      class="css-emdfx1-Col"
+    >
+      <div class="css-1mvnxic-language">English</div><div>Fluent (speech and writing)</div>
+    </div><div class="css-emdfx1-Col">
+      <div class="css-1mvnxic-language">Swedish / Norwegian</div><div>Understands speech and writing</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h2 {
+    margin-block-end: 0;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+  }
+  .period {
+    min-width: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+  }
+</style>
+
+<script is:inline>
+  const ageElement = this.querySelector('div.age')
+  ageElement.innerHTML = `Age: ${new Date() - new Date('1975-10-17')}`
+</script>

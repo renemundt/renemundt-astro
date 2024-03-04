@@ -6,4 +6,5 @@ import preact from '@astrojs/preact'
 export default defineConfig({
   site: 'https://renemundt.netlify.app/',
   integrations: [preact()],
+  trailingSlash: 'never',
 })
